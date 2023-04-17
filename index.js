@@ -9,9 +9,9 @@ const express  = require("express")
 const app = express()
 app.use(express.json())
 
-// app.use("/",(req,res)=>{
-//      res.send("wlc to home page")
-// })
+ app.get("/",(req,res)=>{
+      res.send("wlc to home page")
+})
 app.use("/user",userRouter)
 
 app.use("/blog",blogRouter)
